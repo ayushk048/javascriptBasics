@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #slidebar {
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            background: steelblue;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .active {
+            left: -300px;
+        }
+
+        #slidebar ul li {
+            list-style: none;
+            color: #fff;
+            font-size: 20px;
+            padding: 20px 24px;
+        }
+
+        #slidebar .toogle-btn {
+            position: absolute;
+            top: 30px;
+            left: 330px;
+        }
+
+
+
+        #slidebar .toogle-btn span {
+            display: block;
+            width: 45px;
+            height: 5px;
+            margin-top: 5px;
+            background: steelblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slidebar" class="active">
+        <div class="toogle-btn" onclick="show()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul>
+            <li>home</li>
+            <li>work</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+
+    <script>
+        function show() {
+            document.getElementById('slidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
